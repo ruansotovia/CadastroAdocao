@@ -73,11 +73,11 @@ void buscaEspecie(struct animal *cadastroAnimal){
     if (cadastroAnimal==NULL) printf("\nNao ha Pets cadastrados\n");
     while(cadastroAnimal!=NULL){
         if (strcmp((*cadastroAnimal).especie, especie) == 0){
-            printf("\n=================================================================================\n");
-            printf("| Pet %s\n", (*cadastroAnimal).nome);
-            printf("| Especie: %s | Raca: %s | Sexo: %s | Idade: %d\n", (*cadastroAnimal).especie, (*cadastroAnimal).raca, (*cadastroAnimal).sexo, (*cadastroAnimal).idade);
-            printf("| Cor: %s | Cor dos olhos: %s | Pelo: %s | Comportamento: %s\n", (*cadastroAnimal).cor, (*cadastroAnimal).cor_olhos, (*cadastroAnimal).pelo, (*cadastroAnimal).comportamento);
-            printf("=================================================================================\n");
+            printf("\n===============================================================================\n");
+            printf("  Pet %s                                                                        \n", (*cadastroAnimal).nome);
+            printf("  Especie: %s | Raca: %s | Sexo: %s | Idade: %d                                 \n", (*cadastroAnimal).especie, (*cadastroAnimal).raca, (*cadastroAnimal).sexo, (*cadastroAnimal).idade);
+            printf("  Cor: %s | Cor dos olhos: %s | Pelo: %s | Comportamento: %s                    \n", (*cadastroAnimal).cor, (*cadastroAnimal).cor_olhos, (*cadastroAnimal).pelo, (*cadastroAnimal).comportamento);
+            printf("===============================================================================\n");
         }
         cadastroAnimal = (*cadastroAnimal).proximoAnimal;
     }
@@ -95,11 +95,11 @@ void buscaEspecieRaca(struct animal *cadastroAnimal){
     if (cadastroAnimal==NULL) printf("\nNao ha Pets cadastrados\n");
     while(cadastroAnimal!=NULL){
         if (strcmp((*cadastroAnimal).especie, especie) == 0 && strcmp((*cadastroAnimal).raca, raca) == 0){
-            printf("\n=================================================================================\n");
-            printf("| Pet %s\n", (*cadastroAnimal).nome);
-            printf("| Especie: %s | Raca: %s | Sexo: %s | Idade: %d\n", (*cadastroAnimal).especie, (*cadastroAnimal).raca, (*cadastroAnimal).sexo, (*cadastroAnimal).idade);
-            printf("| Cor: %s | Cor dos olhos: %s | Pelo: %s | Comportamento: %s\n", (*cadastroAnimal).cor, (*cadastroAnimal).cor_olhos, (*cadastroAnimal).pelo, (*cadastroAnimal).comportamento);
-            printf("=================================================================================\n");
+            printf("\n===============================================================================\n");
+            printf("  Pet %s                                                                         \n", (*cadastroAnimal).nome);
+            printf("  Especie: %s | Raca: %s | Sexo: %s | Idade: %d                                  \n", (*cadastroAnimal).especie, (*cadastroAnimal).raca, (*cadastroAnimal).sexo, (*cadastroAnimal).idade);
+            printf("  Cor: %s | Cor dos olhos: %s | Pelo: %s | Comportamento: %s                     \n", (*cadastroAnimal).cor, (*cadastroAnimal).cor_olhos, (*cadastroAnimal).pelo, (*cadastroAnimal).comportamento);
+            printf("===============================================================================\n");
         }
         cadastroAnimal = (*cadastroAnimal).proximoAnimal;
     }
@@ -119,9 +119,9 @@ void buscaCompleta(struct animal *cadastroAnimal){
     while(cadastroAnimal!=NULL){
         if (strcmp((*cadastroAnimal).especie, especie) == 0 && strcmp((*cadastroAnimal).raca, raca) == 0 && strcmp((*cadastroAnimal).sexo, sexo) == 0){
             printf("\n=================================================================================\n");
-            printf("| Pet %s\n", (*cadastroAnimal).nome);
-            printf("| Especie: %s | Raca: %s | Sexo: %s | Idade: %d\n", (*cadastroAnimal).especie, (*cadastroAnimal).raca, (*cadastroAnimal).sexo, (*cadastroAnimal).idade);
-            printf("| Cor: %s | Cor dos olhos: %s | Pelo: %s | Comportamento: %s\n", (*cadastroAnimal).cor, (*cadastroAnimal).cor_olhos, (*cadastroAnimal).pelo, (*cadastroAnimal).comportamento);
+            printf("  Pet %s                                                                          \n", (*cadastroAnimal).nome);
+            printf("  Especie: %s | Raca: %s | Sexo: %s | Idade: %d                                   \n", (*cadastroAnimal).especie, (*cadastroAnimal).raca, (*cadastroAnimal).sexo, (*cadastroAnimal).idade);
+            printf("  Cor: %s | Cor dos olhos: %s | Pelo: %s | Comportamento: %s                      \n", (*cadastroAnimal).cor, (*cadastroAnimal).cor_olhos, (*cadastroAnimal).pelo, (*cadastroAnimal).comportamento);
             printf("=================================================================================\n");
         }
         cadastroAnimal = (*cadastroAnimal).proximoAnimal;
@@ -135,9 +135,9 @@ void imprimir(struct animal *cadastroAnimal){
     if (cadastroAnimal == NULL) printf("Nao ha Pets cadastrados");
     else do{
             printf("\n=================================================================================\n");
-            printf("| Pet %s\n", (*cadastroAnimal).nome);
-            printf("| Especie: %s | Raca: %s | Sexo: %s | Idade: %d\n", (*cadastroAnimal).especie, (*cadastroAnimal).raca, (*cadastroAnimal).sexo, (*cadastroAnimal).idade);
-            printf("| Cor: %s | Cor dos olhos: %s | Pelo: %s | Comportamento: %s\n", (*cadastroAnimal).cor, (*cadastroAnimal).cor_olhos, (*cadastroAnimal).pelo, (*cadastroAnimal).comportamento);
+            printf("  Pet %s                                                                          \n", (*cadastroAnimal).nome);
+            printf("  Especie: %s | Raca: %s | Sexo: %s | Idade: %d                                   \n", (*cadastroAnimal).especie, (*cadastroAnimal).raca, (*cadastroAnimal).sexo, (*cadastroAnimal).idade);
+            printf("  Cor: %s | Cor dos olhos: %s | Pelo: %s | Comportamento: %s                      \n", (*cadastroAnimal).cor, (*cadastroAnimal).cor_olhos, (*cadastroAnimal).pelo, (*cadastroAnimal).comportamento);
             printf("=================================================================================\n");
         cadastroAnimal = (*cadastroAnimal).proximoAnimal;
     }while (cadastroAnimal!=NULL);
@@ -156,7 +156,7 @@ void quantidadeAnimais(struct animal *cadastroAnimal){
         quantidade = quantidade + 1;
         cadastroAnimal = (*cadastroAnimal).proximoAnimal;
     }
-    printf("\n Quantidade de Pets cadastrados: %d\n", quantidade);
+    printf("\nQuantidade de Pets cadastrados: %d\n", quantidade);
     printf("\nPressione qualquer tecla para continuar:\n");
     getch();
 
@@ -198,12 +198,13 @@ void removerAnimal(struct animal **cadastroAnimal){
 };
 
 int main(){
-
+	
     setlocale(LC_ALL, "Portuguese");
     FILE *arquivo;
     int opcao;
     struct animal *cadastroAnimal = NULL;
     struct animal cadastroArquivo;
+    system("color 79");
 
     if ((arquivo = fopen("adocaoPet.txt", "r+")) == NULL){
         printf("Arquivo nao existente, inicializando...\n");
@@ -223,20 +224,20 @@ int main(){
     
 
     do{
-        printf("\n=============================== Sistema Adoção ================================");
-        printf("\n1 - Cadastrar Pet\n");
-        printf("2 - Pets cadastrados\n");
-        printf("3 - Buscar Pet\n");
-        printf("4 - Quantidade de Pets cadastrados\n");
-        printf("5 - Quantidade de Pets por espécie cadastrados\n");
-        printf("6 - Buscar Pet por espécie\n");
-        printf("7 - Buscar Pet por espécie e raça\n");
-        printf("8 - Buscar Pet por espécie, raça e sexo\n");
-        printf("9 - Remover Pet \n");
-        printf("10 - Alterar cadastro de um Pet\n");
-        printf("0 - Sair\n");
-        printf("================================================================================\n");
-        printf("Digite sua opção: ");
+    	
+        printf("\n=========================== Sistema Adocao =============================");
+        printf("\n| 1 - Cadastrar Pet                                                    |\n");
+        printf("| 2 - Pets cadastrados                                                 |\n");
+        printf("| 3 - Buscar Pet                                                       |\n");
+        printf("| 4 - Quantidade de Pets cadastrados                                   |\n");
+        printf("| 5 - Quantidade de Pets por especie cadastrados                       |\n");
+        printf("| 6 - Buscar Pet por especie                                           |\n");
+        printf("| 7 - Buscar Pet por especie e raca                                    |\n");
+        printf("| 8 - Buscar Pet por especie, raca e sexo                              |\n");
+        printf("| 9 - Remover Pet                                                      |\n");
+        printf("| 0 - Sair                                                             |\n");
+        printf("========================================================================\n");
+        printf("Digite sua opcao: ");
         scanf("%d", &opcao);
 
         switch (opcao)
@@ -271,11 +272,11 @@ int main(){
 
         case 3: 
             if(buscaNome(cadastroAnimal)==1){
-            printf("\n=================================================================================\n");
-            printf("| Pet %s\n", (*cadastroAnimal).nome);
-            printf("| Especie: %s | Raca: %s | Sexo: %s | Idade: %d\n", (*cadastroAnimal).especie, (*cadastroAnimal).raca, (*cadastroAnimal).sexo, (*cadastroAnimal).idade);
-            printf("| Cor: %s | Cor dos olhos: %s | Comportamento: %s\n", (*cadastroAnimal).cor, (*cadastroAnimal).cor_olhos, (*cadastroAnimal).comportamento);
-            printf("=================================================================================\n");
+            printf("\n===============================================================================\n");
+            printf("  Pet %s                                                                        \n", (*cadastroAnimal).nome);
+            printf("  Especie: %s \n| Raca: %s \n| Sexo: %s \n| Idade: %d                           \n", (*cadastroAnimal).especie, (*cadastroAnimal).raca, (*cadastroAnimal).sexo, (*cadastroAnimal).idade);
+            printf("  Cor: %s \n| Cor dos olhos: %s \n| Comportamento: %s                           \n", (*cadastroAnimal).cor, (*cadastroAnimal).cor_olhos, (*cadastroAnimal).comportamento);
+            printf("===============================================================================\n");
             printf("\nPressione qualquer tecla para continuar:\n");
             getch();
             }
@@ -299,9 +300,6 @@ int main(){
             break;
 
         case 9: removerAnimal(&cadastroAnimal);
-            break;
-
-        case 10:
             break;
         }
         
